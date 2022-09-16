@@ -22,21 +22,40 @@ burgerCustom.splice(3,2,"chedar","steak");
 burgerCustom.splice(5,3,"salade","oignon","ketchup");
 console.log(`burger custom: ${burgerCustom}`);
 
-let commande = [];
-let x = prompt("combien d'elements voulez vous?: ");
-let nb = parseInt(x);
 
-for(let i=0;i!=nb;i++){
-    let element = prompt("Que voulez vous ajouter?: ")
-    commande.push(element);
+let choix = prompt("classic - Vegie - Vegan - Carnivore - perso");
+
+switch(choix){
+    case "perso":      
+    let commande = [];
+    let x = prompt("combien d'elements voulez vous?: ");
+    let nb = parseInt(x);
+    
+        for(let i=0;i!=nb;i++){
+            let element = prompt("Que voulez vous ajouter?: ")
+            commande.push(element);
+        }
+        if(commande.length>0){
+            alert(commande);
+            console.log(`burger de commande: ${commande}`)
+        }
+        break;
+    case "classic":
+        console.log(`burger de commande: ${burgerO}`)
+        break;
+    case "Vegie":
+        console.log(`burger de commande: ${burgerVegie}`)
+        break;
+    case "Vegan":
+        console.log(`burger de commande: ${burgerVegan}`)
+        break;
+    case "carnivore":
+        console.log(`burger de commande: ${burgerCarnivore}`)
+        break;
+    default:
+        "choix non compris"
+        break;
 }
-if(commande.length>0){
-    alert(commande);
-    console.log(`burger de commande: ${commande}`)
-}
-
-
-
 /*
 1/burger vege(pas de viande)
 2/burger vegan(pas de produits animal)
