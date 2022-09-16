@@ -32,7 +32,7 @@ for(let i=0;i!=nb;i++){
 }
 if(commande.length>0){
     alert(commande);
-    console.log(`burger custom: ${commande}`)
+    console.log(`burger de commande: ${commande}`)
 }
 
 
